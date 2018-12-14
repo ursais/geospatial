@@ -342,11 +342,23 @@ odoo.define('base_geoengine.GeoengineRenderer', function (require) {
                             vals = serie.getRanges();
                             scale = scale.domain([0, vals.length], vals.length);
                             break;
+                        case 'custom':
+                            vals = serie.getClassUniqueValues();
+                            scale = chroma.scale('RdYlBu')
+                                          .domain([0, vals.length], vals.length);
+                            break;
                     }
                     var colors = [];
                     _.each(scale.colors(), function (color){
                         colors.push(chroma(color).alpha(opacity).css());
                     });
+                    if(cfg.classification == 'custom'){
+                        colors = [];
+                        _.each(vals, function(val){
+                            if(val)
+                                colors.push(chroma(val).alpha(opacity).css());
+                        });
+                    }
                     var styles_map = {};
                     var styles;
                     _.each(colors, function (color) {
