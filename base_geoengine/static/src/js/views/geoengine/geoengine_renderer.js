@@ -370,14 +370,14 @@ odoo.define('base_geoengine.GeoengineRenderer', function (require) {
                         });
                         var stroke = new ol.style.Stroke({
                             color: '#333333',
-                            width: 1,
+                            width: 2,
                         });
                         styles = [
                             new ol.style.Style({
                               image: new ol.style.Circle({
                                   fill: fill,
                                   stroke: stroke,
-                                  radius: 5,
+                                  radius: 7,
                               }),
                               fill: fill,
                               stroke: stroke,
@@ -411,7 +411,7 @@ odoo.define('base_geoengine.GeoengineRenderer', function (require) {
                     });
                     var stroke = new ol.style.Stroke({
                         color: '#333333',
-                        width: 1,
+                        width: 2,
                     });
                     _.each(values, function (value) {
                         if (value in styles_map) {
@@ -447,7 +447,7 @@ odoo.define('base_geoengine.GeoengineRenderer', function (require) {
                     });
                     var stroke = new ol.style.Stroke({
                         color: '#333333',
-                        width: 1,
+                        width: 2,
                     });
                     var olStyleText = new ol.style.Text({
                         text: '',
@@ -456,7 +456,7 @@ odoo.define('base_geoengine.GeoengineRenderer', function (require) {
                         }),
                         stroke: new ol.style.Stroke({
                             color: '#FFFFFF',
-                            width: 2,
+                            width: 5,
                         })
                     });
                     var styles = [
