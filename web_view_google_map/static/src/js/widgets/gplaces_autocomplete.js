@@ -329,7 +329,7 @@ odoo.define('web_view_google_map.GplaceAutocompleteFields', function (require) {
                 general: {
                     name: 'name',
                     website: 'website',
-                    phone: ['international_phone_number', 'formatted_phone_number']
+                    // phone: ['international_phone_number', 'formatted_phone_number']
                 },
                 address: {
                     street: ['street_number', 'route'],
@@ -438,7 +438,7 @@ odoo.define('web_view_google_map.GplaceAutocompleteFields', function (require) {
             setTimeout(function () {
                 if (!self.places_autocomplete) {
                     self.places_autocomplete = new google.maps.places.Autocomplete(self.$input.get(0), {
-                        types: ['establishment']
+                        types: []
                     });
                 }
                 // When the user selects an address from the dropdown, populate the address fields in the form.

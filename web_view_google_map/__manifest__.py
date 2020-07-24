@@ -14,6 +14,8 @@
         'contacts',
     ],
     'data': [
+        'data/google_maps_libraries.xml',
+        'data/ir_config_parameter.xml',
         'views/google_places_template.xml',
         'views/res_partner.xml',
     ],
